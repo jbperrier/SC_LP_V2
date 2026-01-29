@@ -59,6 +59,8 @@ body {
 .logo {
     display: block;
     height: auto;
+   max-width: 160px;
+   
 }
 
 /* Dashboard Placeholder */
