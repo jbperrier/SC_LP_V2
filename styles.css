@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Custom Styles for SolidCore Scout Landing Page
+   ========================================================================== */
+
+/* Font Setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #2F2F40;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Brand Colors */
+.bg-magenta {
+    background-color: #870068;
+}
+
+.text-magenta {
+    color: #870068;
+}
+
+.bg-raspberry {
+    background-color: #C42E70;
+}
+
+.text-raspberry {
+    color: #C42E70;
+}
+
+.border-magenta {
+    border-color: #870068;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    display: block;
+    height: auto;
+}
+
+/* Dashboard Placeholder */
+.placeholder-dashboard {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.form-scout input[type="email"] {
+    transition: all 0.2s ease;
+}
+
+.form-scout input[type="email"]:focus {
+    border-color: #870068;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(135, 0, 104, 0.1);
+}
+
+.form-scout button[type="submit"] {
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.form-scout button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Success Modal */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-modal {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #10b981;
+}
+
+.success-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #870068;
+}
+
+.success-message {
+    color: #6b6b6b;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.success-button {
+    padding: 0.8rem 2rem;
+    background: #870068;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.success-button:hover {
+    background: #6d0054;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Form Error State */
+.form-scout input.error {
+    border-color: #dc3545;
+    animation: shake 0.5s;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .success-modal {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .success-title {
+        font-size: 1.5rem;
+    }
+    
+    .success-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Custom Scrollbar (Optional) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #870068;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d0054;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+    outline: 2px solid #870068;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .form-scout,
+    footer {
+        display: none;
+    }
+}
